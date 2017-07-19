@@ -1,22 +1,10 @@
 function [] = CalcHu(h_proc, data_set, rescale_slope, rescale_intercept, pix_spac)
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
 
+% Calculate Hounsfield Unit Value
+% Hounsfield units = m*SV+b
 
-% h = h_proc; % Draw your doodle here
-% hc = get(h,'Children');
-% x_data = []; y_data = [];
-% for ii=1:length(hc)
-%   x = get(hc(ii),'XData');
-%   y = get(hc(ii),'YData');
-%   x_data = [x_data; x(:)];
-%   y_data = [y_data; y(:)];
-% end
-% pos = getPosition(h_proc);
 mask = h_proc.createMask();
 [y_data, x_data] = find(mask);
-
-% reuse_pos = [x_data, y_data];
 
 res = 0;
 m = 0;

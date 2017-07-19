@@ -1,7 +1,4 @@
 function [] = figCorela( abs_path )
-%UNTITLED7 Summary of this function goes here
-%   Detailed explanation goes here
-
 
 global h_proc_1st;
 global roi_pos_1st;
@@ -22,11 +19,6 @@ set(fig1, 'unit', 'normalized', 'position', [0,0,1,1]);
 
 % ROI freehand 
 pause on;
-% input_number = uicontrol('style', 'edit',...
-%                         'parent', fig1,...
-%                         'string', 'Input image number here',...
-%                         'Position', [50, 800, 200, 90],...
-%                         'callback', 'h_proc = imfreehand;');
 
 start_draw = uicontrol('style', 'pushbutton',...
                         'parent', fig1,...
@@ -49,9 +41,6 @@ create_reuse = uicontrol('style', 'pushbutton',...
                         'string', 'reuse the position',...
                         'Position', [50, 200, 200, 90],...
                         'callback', 'reUse(roi_pos_1st);');
-
-% uicontrol(show_SubPlot);
-% uicontrol(start_calc);
 
 uicontrol(start_draw);
 hText=impixelinfoval(gcf, tmp_show);

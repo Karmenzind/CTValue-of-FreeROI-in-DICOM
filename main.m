@@ -45,8 +45,6 @@ image_number = input(['Input image number:\n'...
 % locate
 if isnumeric(image_number) && isnumeric(series_number)
     file_path_1st = TraversalAndLocate(maindir_1st, image_number, series_number);
-else
-    file_path_1st = 'C:\\Users\\Karmenzind\\Desktop\\TEMPfordicom\\615\\CC63FD1B67034EA499E330550B264E';
 end
 
 read_res_1st = dicomread(file_path_1st);
@@ -58,11 +56,7 @@ pix_spac_1st = dcm_info_1st.PixelSpacing;
 
 figCorela(file_path_1st);
 
-
-% fprintf('Hounsfield Unit value is: \n');
 % fetch pos and convert pixel value to grayscale
 % caculate Hounsfield Unit value
-
-% Hounsfield units = m*SV+b
 
 % record
